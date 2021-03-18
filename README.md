@@ -2,7 +2,7 @@
 Electron v12から`contextIsolation`のデフォルトが`true`になったため、そのままだとIPC通信が利用できないため、`contextBridge`を使った方法に切り替えます。
 
 ## 解説ページ
-※Please wait...
+* [[Electron] contextBridge経由でIPC通信を行う](https://blog.katsubemakito.net/nodejs/electron/ipc-for-contextbridge)
 
 ## 準備
 Gitでリポジトリを取得します。
