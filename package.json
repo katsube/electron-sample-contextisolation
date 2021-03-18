@@ -1,0 +1,42 @@
+{
+  "name": "electron-sample-contextisolation",
+  "version": "1.0.0",
+  "description": "sample for electron contextIsolation",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-builder --mac --x64",
+    "build-win": "electron-builder --win --x64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katsube/electron-sample-contextisolation.git"
+  },
+  "author": "M.Katsube",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katsube/electron-sample-contextisolation/issues"
+  },
+  "homepage": "https://github.com/katsube/electron-sample-contextisolation#readme",
+  "build": {
+    "appId": "net.makitokatsube.blog.app.contextisolation",
+    "files": [
+      "package.json",
+      "src/",
+      "public/"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "dmg": {
+      "sign": false
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "electron": "^12.0.1",
+    "electron-builder": "^22.10.5"
+  }
+}

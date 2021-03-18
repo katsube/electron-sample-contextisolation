@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+
+<h1>にゃんこ語/わんこ語変換</h1>
+<form>
+  <p>
+    <input type="text" id="nyan" placeholder="にゃんこ変換">
+    <button id="btn-nyan" type="button">変換</button>
+  </p>
+  <p>
+    <input type="text" id="wan" placeholder="わんこ変換">
+    <button id="btn-wan" type="button">変換</button>
+  </p>
+</form>
+
+
+<script>
+// にゃんこ変換
+document.querySelector('#btn-nyan').addEventListener('click', async ()=>{
+  const nyan = document.querySelector('#nyan')
+  const buff = await window.api.nyan(nyan.value)
+  nyan.value = buff
+})
+
+// わんこ変換
+document.querySelector('#btn-wan').addEventListener('click', async ()=>{
+  const wan = document.querySelector('#wan')
+  const buff = await window.api.wan(wan.value)
+  wan.value = buff
+})
+</script>
+</body>
+</html>
