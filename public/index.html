@@ -34,6 +34,11 @@ document.querySelector('#btn-wan').addEventListener('click', async ()=>{
   const buff = await window.api.wan(wan.value)
   wan.value = buff
 })
+
+// 背景画像をメインプロセスに言われるがままに変更
+window.api.on('bgimage', (event, number)=>{
+  document.querySelector('body').style.backgroundImage = `url(image/${number}.png)`
+});
 </script>
 </body>
 </html>

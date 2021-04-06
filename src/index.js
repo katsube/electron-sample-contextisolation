@@ -12,6 +12,12 @@ function createWindow (file) {
     }
   })
 
+  // 1秒置きに背景画像を変更
+  setInterval(()=>{
+    const rnd = (Math.floor(Math.random() * 10) % 8) + 1
+    win.webContents.send('bgimage', rnd)
+  }, 1000)
+
   win.loadFile(`public/${file}`)
 }
 
